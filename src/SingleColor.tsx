@@ -20,7 +20,7 @@ const SingleColor = ({ rgb, weight, index }: SingleColorProps) => {
 
         const timeOut = setTimeout(() => {
             setAlert(false)
-        }, 3000)
+        }, 1000)
 
         return () => clearTimeout(timeOut)
 
@@ -38,8 +38,10 @@ const SingleColor = ({ rgb, weight, index }: SingleColorProps) => {
                 navigator.clipboard.writeText(hex)
             }}
         >
-            <p className="percent-value">{weight}%</p>
-            <p className="color-value">{hex}</p>
+            <div className="color-info">
+                <p className="percent-value">{weight}%</p>
+                <p className="color-value">{hex}</p>
+            </div>
             {alert && <p className="alert">copied to clipboard!</p>}
         </article>
     )

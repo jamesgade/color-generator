@@ -217,28 +217,52 @@ input.error {
     cursor: pointer;
     font-size: 1rem;
     text-transform: none;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    min-height: 14rem;
 }
 
+.color .color-info {
+    display: flex;
+    justify-content: space-between;
+    border-radius: 0.3rem;
+    padding: 0.2rem 0.5rem;
+}
+
+.color .color-info {
+    background-color: #000;
+}
+
+.color-light .color-info {
+    background-color: #fff;
+}
+
+.color-value,
 .percent-value {
     margin-bottom: 0;
-    color: var(--clr-grey-1);
+    color: #fff;
 }
 
-.color-value {
-    color: var(--clr-grey-1);
-    margin-bottom: 0;
-}
-
-.color-light .color-value {
-    color: var(--clr-white);
-}
-
+.color-light .color-value,
 .color-light .percent-value {
-    color: var(--clr-white);
+    margin-bottom: 0;
+    color: #000;
 }
 
 .alert {
+    margin-bottom: 0;
     text-transform: uppercase;
     font-size: 0.85rem;
-    margin-top: 0.5rem;
+    color: #fff;
+    background-color: #000;
+    display: inline-block;
+    border-radius: 0.3rem;
+    display: flex;
+    justify-content: center;
+}
+
+.color-light .alert{
+    color: #000;
+    background-color: #fff;
 }
