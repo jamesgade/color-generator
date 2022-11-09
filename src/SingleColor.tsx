@@ -31,7 +31,7 @@ const SingleColor = ({ rgb, weight, index }: SingleColorProps) => {
 
     return (
         <article
-            className={`color ${index > 10 && "color-light"}`}
+            className={`color ${index > 9 && "color-light"}`}
             style={{ backgroundColor: `rgb(${rgb.join(',')})` }}
             onClick={() => {
                 setAlert(true)
